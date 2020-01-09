@@ -9,11 +9,11 @@
 # they accept any liabilities with respect to them.
 
 administrator.announcement.list.label.moment = Fecha
-administrator.announcement.list.label.title = Titulo
+administrator.announcement.list.label.title = Título
 
-administrator.announcement.form.label.title = Titulo:
+administrator.announcement.form.label.title = Título:
 administrator.announcement.form.label.moment = Fecha:
-administrator.announcement.form.label.moreInfo = Mas informacion:
+administrator.announcement.form.label.moreInfo = Mas información:
 administrator.announcement.form.label.text = Texto:
 administrator.announcement.form.button.return = Volver
 administrator.announcement.form.button.create = Crear
