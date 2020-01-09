@@ -22,7 +22,7 @@ import javax.persistence.OneToMany;
 import javax.persistence.Transient;
 import javax.validation.Valid;
 import javax.validation.constraints.NotBlank;
-import javax.validation.constraints.NotNull;
+import javax.validation.constraints.NotEmpty;
 
 import org.hibernate.validator.constraints.Length;
 
@@ -71,8 +71,8 @@ public class UserAccount extends DomainEntity {
 	@Valid
 	private UserIdentity	identity;
 
-	// Derived attributes -----------------------------------------------------
 
+	// Derived attributes -----------------------------------------------------
 
 	@Transient
 	public boolean isAnonymous() {
@@ -83,13 +83,12 @@ public class UserAccount extends DomainEntity {
 		return result;
 	}
 
+
 	// Relationships ----------------------------------------------------------
 
-
-	@NotNull
-	@Valid
+	@NotEmpty
 	@OneToMany(mappedBy = "userAccount")
-	private Collection<UserRole> roles;
+	private Collection<@Valid UserRole> roles;
 
 
 	@Transient
