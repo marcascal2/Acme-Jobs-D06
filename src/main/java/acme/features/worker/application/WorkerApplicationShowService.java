@@ -5,6 +5,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import acme.entities.applications.Application;
+import acme.entities.applications.ApplicationStatus;
 import acme.entities.roles.Worker;
 import acme.framework.components.Model;
 import acme.framework.components.Request;
@@ -43,7 +44,10 @@ public class WorkerApplicationShowService implements AbstractShowService<Worker,
 		assert request != null;
 		assert entity != null;
 		assert model != null;
-		request.unbind(entity, model, "referenceNumber", "moment", "status", "statement", "skills", "qualifications");
+		request.unbind(entity, model, "referenceNumber", "moment", "status", "statement", "skills", "qualifications", "justification");
+
+		boolean hasJustification = entity.getStatus().equals(ApplicationStatus.REJECTED);
+		model.setAttribute("hasJustification", hasJustification);
 	}
 
 	@Override
