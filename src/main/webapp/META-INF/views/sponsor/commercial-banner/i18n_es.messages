@@ -10,13 +10,13 @@
 
 sponsor.commercial-banner.list.label.picture = Fotografía
 sponsor.commercial-banner.list.label.slogan = Eslogan
-sponsor.commercial-banner.list.label.target = Target
+sponsor.commercial-banner.list.label.target = Destino
 sponsor.commercial-banner.list.label.credit-card = Tarjeta de crédito
 
 
 sponsor.commercial-banner.form.label.picture = Fotografía:
 sponsor.commercial-banner.form.label.slogan = Eslogan:
-sponsor.commercial-banner.form.label.target = Target:
+sponsor.commercial-banner.form.label.target = Destino:
 sponsor.commercial-banner.form.label.credit-card = Número de tarjeta de crédito:
 
 sponsor.commercial-banner.form.errors.expiredCard = Esta tarjeta está caducada

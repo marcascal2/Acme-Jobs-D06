@@ -13,7 +13,7 @@ authenticated.job.form.label.description = Descripción:
 authenticated.job.form.label.descriptor = Descriptor:
 
 
-authenticated.job.form.button.duty = Duties
+authenticated.job.form.button.duty = Deberes
 
 authenticated.job.form.button.list-audit-records = Auditorías
 

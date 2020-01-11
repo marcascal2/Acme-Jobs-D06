@@ -16,7 +16,7 @@ master.banner.background = #FFE97F
 
 master.welcome.title = Welcome!
 master.welcome.text = \
-	Welcome to Acme Jobs! Never before has it bee easier to get your \
+	Welcome to Acme Jobs! Never before has it been easier to get your \
 	project up and running!
 
 # master.menu #################################################################
@@ -154,7 +154,7 @@ master.footer.label.spanish = Spanish
 
 # master.company ##############################################################
 
-master.company.title = La compañía
+master.company.title = The company
 master.company.text = \
 	Acme Jobs, Inc. is a fictitious fictitious company that provides a \
 	starter project for the students of the Design and Testing subject of the \

@@ -13,7 +13,7 @@ worker.job.form.label.description = Descripción:
 worker.job.form.label.descriptor = Descriptor:
 
 
-worker.job.form.button.duty = Duties
+worker.job.form.button.duty = Deberes
 
 worker.job.form.button.list-auditor-records = Auditorías
 worker.job.form.button.apply = Solicitar trabajo

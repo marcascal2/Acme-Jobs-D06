@@ -1,8 +1,8 @@
 provider.request.list.label.moment = Fecha
 provider.request.list.label.deadline = Fecha límite
-provider.request.list.label.title = Titulo
+provider.request.list.label.title = Título
 
-provider.request.form.label.title = Titulo:
+provider.request.form.label.title = Título:
 provider.request.form.label.moment = Fecha:
 provider.request.form.label.deadline = Fecha límite:
 provider.request.form.label.text = Descripción:
