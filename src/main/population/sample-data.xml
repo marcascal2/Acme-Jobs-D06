@@ -15,7 +15,7 @@
 	<bean id="request01" class="acme.entities.requests.Request">
 		<property name="title" value="Web request" />
 		<property name="moment" value="2019/06/10 11:39" />
-		<property name="deadline" value="2020/05/23 00:00" />
+		<property name="deadline" value="2022/05/23 00:00" />
 		<property name="text" value="Request for the deployment of a new web page" />
 		<property name="reward" value="2000 EUR" />
 		<property name="ticker" value="RASDF-12345" />
@@ -24,7 +24,7 @@
 	<bean id="request02" class="acme.entities.requests.Request">
 		<property name="title" value="Comercial request" />
 		<property name="moment" value="2019/03/13 21:47" />
-		<property name="deadline" value="2019/12/28 03:09" />
+		<property name="deadline" value="2021/12/28 03:09" />
 		<property name="text" value="Request for sending 50 packages via mail" />
 		<property name="reward" value="1400 EUR" />
 		<property name="ticker" value="RGHJK-67890" />
@@ -33,7 +33,7 @@
 	<bean id="request03" class="acme.entities.requests.Request">
 		<property name="title" value="Storage request" />
 		<property name="moment" value="2018/10/10 18:20" />
-		<property name="deadline" value="2020/01/01 13:00" />
+		<property name="deadline" value="2020/10/01 13:00" />
 		<property name="text" value="Request for the creation of a new database" />
 		<property name="reward" value="3600 EUR" />
 		<property name="ticker" value="RLZXC-52684" />
