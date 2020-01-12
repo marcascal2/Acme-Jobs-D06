@@ -15,6 +15,10 @@
 	<acme:form-textbox code="worker.application.form.label.skills" path="skills"/>
 	<acme:form-textbox code="worker.application.form.label.qualifications" path="qualifications"/>
 	
+	<jstl:if test="${hasJustification }">
+		<acme:form-textbox code="worker.application.form.label.justification" path="justification"/>
+	</jstl:if>
+	
 	<acme:form-hidden path="idJob"/>
 	
 	<acme:form-submit test="${ command == 'create'}" code="worker.application.form.button.create" action="/worker/application/create"/>

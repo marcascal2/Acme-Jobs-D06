@@ -15,7 +15,7 @@
 	<bean id="request01" class="acme.entities.requests.Request">
 		<property name="title" value="Web request" />
 		<property name="moment" value="2019/06/10 11:39" />
-		<property name="deadline" value="2020/05/23 00:00" />
+		<property name="deadline" value="2022/05/23 00:00" />
 		<property name="text" value="Request for the deployment of a new web page" />
 		<property name="reward" value="2000 EUR" />
 		<property name="ticker" value="RASDF-12345" />

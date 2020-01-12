@@ -1,10 +1,10 @@
 authenticated.job.duty.form.label.job = Trabajo
-authenticated.job.duty.list.label.title = Title
-authenticated.job.duty.list.label.description = Description
-authenticated.job.duty.list.label.percentage = Percentage
+authenticated.job.duty.list.label.title = Título
+authenticated.job.duty.list.label.description = Descripción
+authenticated.job.duty.list.label.percentage = Porcentaje
 
-authenticated.job.duty.form.label.title = Title:
-authenticated.job.duty.form.label.description = Description:
-authenticated.job.duty.form.label.percentage = Percentage:
+authenticated.job.duty.form.label.title = Título:
+authenticated.job.duty.form.label.description = Descripción:
+authenticated.job.duty.form.label.percentage = Porcentaje:
 
-authenticated.job.duty.form.button.return = Return
+authenticated.job.duty.form.button.return = Volver

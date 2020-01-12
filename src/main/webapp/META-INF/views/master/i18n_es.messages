@@ -66,7 +66,7 @@ master.menu.administrator.announcements.create = Crear anuncio
 master.menu.administrator.company_records = Registro de compañías
 master.menu.administrator.company_records.create = Registrar compañía
 master.menu.administrator.investor_records = Registro de inversores
-master.menu.administrator.investor_records.create = Registrar inversior
+master.menu.administrator.investor_records.create = Registrar inversor
 master.menu.administrator.challenges = Desafíos
 master.menu.administrator.challenges.create = Crear desafío
 
@@ -152,7 +152,7 @@ master.footer.label.spanish = Español
 
 master.company.title = La compañía
 master.company.text = \
-	Acme Jobs, Inc. es una compañía fictícia que proporciona un proyecto \
+	Acme Jobs, Inc. es una compañía ficticia que proporciona un proyecto \
 	plantilla para los estudiantes de la asignatura Diseño y Pruebas, en el Grado \
 	en Ingeniería del Software de la Universidad de Sevilla.
 master.company.name = Acme Jobs, Inc.
