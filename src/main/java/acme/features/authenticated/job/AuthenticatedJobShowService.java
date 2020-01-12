@@ -1,10 +1,14 @@
 
 package acme.features.authenticated.job;
 
+import java.util.Collection;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import acme.entities.applications.Application;
 import acme.entities.descriptors.Descriptor;
+import acme.entities.duties.Duty;
 import acme.entities.jobs.Job;
 import acme.framework.components.Model;
 import acme.framework.components.Request;
@@ -30,18 +34,44 @@ public class AuthenticatedJobShowService implements AbstractShowService<Authenti
 		assert request != null;
 		assert entity != null;
 		assert model != null;
+		request.unbind(entity, model, "reference", "title", "status", "deadline");
+		request.unbind(entity, model, "salary", "moreInfo", "description");
+
+		Descriptor descriptor = entity.getDescriptor();
+		if (descriptor != null) {
+			String descriptorTitle = descriptor.getTitle();
+			model.setAttribute("descriptor", descriptorTitle);
+
+			model.setAttribute("descriptorId", descriptor.getId());
+
+			Collection<Duty> duties = descriptor.getDuty();
+			model.setAttribute("duties", duties);
+
+			Double sum = 0.0;
+
+			for (Duty duty : duties) {
+				if (duty.getPercentageTimeForWeek() != null) {
+					sum = sum + duty.getPercentageTimeForWeek();
+				}
+			}
+
+			model.setAttribute("sumPercentage", sum == 100.0);
+		}
+		Collection<Application> applications = entity.getApplication();
+		model.setAttribute("application", applications);
 
 		int idJob = entity.getId();
 		model.setAttribute("idJob", idJob);
 
-		request.unbind(entity, model, "id", "reference", "title", "status", "deadline");
+		boolean applied = false;
+		for (Application a : applications) {
+			if (a.getWorker() != null) {
+				applied = true;
+				break;
+			}
+		}
 
-		request.unbind(entity, model, "salary", "moreInfo", "description", "finalMode");
-
-		Descriptor descriptor = entity.getDescriptor();
-		model.setAttribute("descriptor", descriptor.getTitle());
-
-		model.setAttribute("descriptorId", descriptor.getId());
+		model.setAttribute("applied", applied);
 	}
 
 	@Override

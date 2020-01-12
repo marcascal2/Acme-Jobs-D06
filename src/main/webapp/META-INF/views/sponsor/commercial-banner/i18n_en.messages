@@ -15,7 +15,11 @@ sponsor.commercial-banner.list.label.target = Target
 sponsor.commercial-banner.form.label.picture = Picture:
 sponsor.commercial-banner.form.label.slogan = Slogan:
 sponsor.commercial-banner.form.label.target = Target:
-sponsor.commercial-banner.form.label.credit-card = Credit card number: 
+sponsor.commercial-banner.form.label.titleHolder = Credit card title holder:
+sponsor.commercial-banner.form.label.creditCardNumber = Credit card number: 
+sponsor.commercial-banner.form.label.cvc = CVC: 
+sponsor.commercial-banner.form.label.month = Credit card expiration month:
+sponsor.commercial-banner.form.label.year = Credit card expiration year:
 
 sponsor.commercial-banner.form.errors.expiredCard = This is a expired credit card
 sponsor.commercial-banner.form.error.span = The slogan is considered span, please change it

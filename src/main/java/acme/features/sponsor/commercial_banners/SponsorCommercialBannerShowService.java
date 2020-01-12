@@ -5,6 +5,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import acme.entities.banners.CommercialBanner;
+import acme.entities.credit_cards.CreditCard;
 import acme.entities.roles.Sponsor;
 import acme.framework.components.Model;
 import acme.framework.components.Request;
@@ -41,7 +42,15 @@ public class SponsorCommercialBannerShowService implements AbstractShowService<S
 		assert request != null;
 		assert entity != null;
 		assert model != null;
-		request.unbind(entity, model, "picture", "slogan", "target", "creditCard");
+		request.unbind(entity, model, "picture", "slogan", "target");
+
+		CreditCard creditCard = entity.getCreditCard();
+
+		model.setAttribute("titleHolder", creditCard.getTitleHolder());
+		model.setAttribute("creditCardNumber", creditCard.getCreditCardNumber());
+		model.setAttribute("month", creditCard.getMonth());
+		model.setAttribute("year", creditCard.getYear());
+		model.setAttribute("cvc", creditCard.getCvc());
 	}
 
 	@Override

@@ -52,9 +52,6 @@ public class WorkerApplicationCreateService implements AbstractCreateService<Wor
 		assert entity != null;
 		assert errors != null;
 
-		int workerId = request.getPrincipal().getActiveRoleId();
-		Worker worker = this.repository.findWorkerById(workerId);
-
 		request.bind(entity, errors, "moment");
 	}
 

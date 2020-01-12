@@ -2,13 +2,14 @@
 package acme.entities.credit_cards;
 
 import javax.persistence.Entity;
+import javax.persistence.Index;
 import javax.persistence.OneToOne;
+import javax.persistence.Table;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Pattern;
 
 import org.hibernate.validator.constraints.CreditCardNumber;
-import org.hibernate.validator.constraints.Range;
 
 import acme.entities.roles.Sponsor;
 import acme.framework.entities.DomainEntity;
@@ -18,6 +19,9 @@ import lombok.Setter;
 @Entity
 @Getter
 @Setter
+@Table(indexes = {
+	@Index(columnList = "creditCardNumber"),
+})
 public class CreditCard extends DomainEntity {
 
 	/**
@@ -37,7 +41,6 @@ public class CreditCard extends DomainEntity {
 
 	@NotBlank
 	@Pattern(regexp = "\\d{2}", message = "XX")
-	@Range(min = 1, max = 12)
 	private String				month;
 
 	@NotBlank
@@ -46,6 +49,6 @@ public class CreditCard extends DomainEntity {
 
 	//	Relationship
 
-	@OneToOne(optional = false)
+	@OneToOne(optional = true)
 	private Sponsor				sponsor;
 }

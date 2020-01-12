@@ -9,3 +9,4 @@ sponsor.credit-card.form.button.update = Actualizar tarjeta
 sponsor.credit-card.form.button.return = Volver
 
 sponsor.credit-card.form.errors.expiredCard = Esta tarjeta está caducada
+sponsor.credit-card.form.errors.month = El mes no es correcto
