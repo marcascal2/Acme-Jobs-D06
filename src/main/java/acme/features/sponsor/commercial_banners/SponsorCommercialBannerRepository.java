@@ -7,6 +7,7 @@ import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
 
 import acme.entities.banners.CommercialBanner;
+import acme.entities.credit_cards.CreditCard;
 import acme.entities.roles.Sponsor;
 import acme.entities.spam_words.SpamWord;
 import acme.framework.repositories.AbstractRepository;
@@ -28,4 +29,13 @@ public interface SponsorCommercialBannerRepository extends AbstractRepository {
 
 	@Query("select c from CommercialBanner c where c.sponsor.id = ?1")
 	CommercialBanner findOneCommercialBannerBySponsorId(int sponsorId);
+
+	@Query("select cc from CreditCard cc where cc.creditCardNumber = ?1")
+	CreditCard findOneCreditCarByNumber(String creditCardNumber);
+
+	@Query("select cb from CommercialBanner cb where cb.creditCard.creditCardNumber = ?1")
+	Collection<CommercialBanner> findCommercialBannersWithOneCreditCard(String creditCardNumber);
+
+	@Query("select s from Sponsor s where s.creditCard.creditCardNumber = ?1")
+	Collection<Sponsor> findSponsorsWithOneCreditCard(String creditCardNumber);
 }

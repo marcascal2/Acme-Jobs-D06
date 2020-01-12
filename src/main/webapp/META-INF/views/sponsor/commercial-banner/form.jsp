@@ -19,9 +19,11 @@
 	<acme:form-url code="sponsor.commercial-banner.form.label.picture" path="picture" />
 	<acme:form-textbox code="sponsor.commercial-banner.form.label.slogan" path="slogan" />
 	<acme:form-url code="sponsor.commercial-banner.form.label.target" path="target" />
-	<jstl:if test="${command != 'create'}">
-		<acme:form-textbox code="sponsor.commercial-banner.form.label.credit-card" path="creditCard" readonly="true"/>
-	</jstl:if>
+	<acme:form-textbox code="sponsor.commercial-banner.form.label.titleHolder" path="titleHolder" readonly="${command != 'create'}"/>
+	<acme:form-textbox code="sponsor.commercial-banner.form.label.creditCardNumber" path="creditCardNumber" readonly="${command != 'create'}"/>
+	<acme:form-textbox code="sponsor.commercial-banner.form.label.month" path="month" readonly="${command != 'create'}"/>
+	<acme:form-textbox code="sponsor.commercial-banner.form.label.year" path="year" readonly="${command != 'create'}"/>
+	<acme:form-textbox code="sponsor.commercial-banner.form.label.cvc" path="cvc" readonly="${command != 'create'}"/>
 
 	<acme:form-return code="sponsor.commercial-banner.form.button.return" />
 	<acme:form-submit test="${command == 'show'}" 

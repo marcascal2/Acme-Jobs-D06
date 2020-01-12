@@ -97,10 +97,10 @@
     create table `commercial_banner` (
        `id` integer not null,
         `version` integer not null,
-        `credit_card` varchar(255),
         `picture` varchar(255),
         `slogan` varchar(255),
         `target` varchar(255),
+        `credit_card_id` integer not null,
         `sponsor_id` integer,
         primary key (`id`)
     ) engine=InnoDB;
@@ -137,7 +137,7 @@
         `month` varchar(255),
         `title_holder` varchar(255),
         `year` varchar(255),
-        `sponsor_id` integer not null,
+        `sponsor_id` integer,
         primary key (`id`)
     ) engine=InnoDB;
 
@@ -315,9 +315,7 @@ create index IDXg54pxa1gngqheaipukeg8jypk on `application` (`moment` asc);
     alter table `application` 
        add constraint UK_rf84q38qr35ymh5nn0dcxfdue unique (`reference_number`);
 create index IDXnr284tes3x8hnd3h716tmb3fr on `challenge` (`deadline`);
-
-    alter table `credit_card` 
-       add constraint UK_4cr95y27s8ti6otoyflmma6oy unique (`sponsor_id`);
+create index IDX9vj3ioxk1h0wvlpcytul1jlho on `credit_card` (`credit_card_number`);
 
     alter table `job` 
        add constraint UK_7jmfdvs0b0jx7i33qxgv22h7b unique (`reference`);
@@ -378,6 +376,11 @@ create index IDXh9syauj4iixf18uts83saik5d on `request` (`ticker`);
        add constraint FK_h52w0f3wjoi68b63wv9vwon57 
        foreign key (`user_account_id`) 
        references `user_account` (`id`);
+
+    alter table `commercial_banner` 
+       add constraint `FKfp0yot74q1m8ofbclq3nlfidw` 
+       foreign key (`credit_card_id`) 
+       references `credit_card` (`id`);
 
     alter table `commercial_banner` 
        add constraint `FKd0k52g7lcacefcp62kb4p9aor` 

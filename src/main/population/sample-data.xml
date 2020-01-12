@@ -24,7 +24,7 @@
 	<bean id="request02" class="acme.entities.requests.Request">
 		<property name="title" value="Comercial request" />
 		<property name="moment" value="2019/03/13 21:47" />
-		<property name="deadline" value="2019/12/28 03:09" />
+		<property name="deadline" value="2022/12/28 03:09" />
 		<property name="text" value="Request for sending 50 packages via mail" />
 		<property name="reward" value="1400 EUR" />
 		<property name="ticker" value="RGHJK-67890" />
@@ -33,7 +33,7 @@
 	<bean id="request03" class="acme.entities.requests.Request">
 		<property name="title" value="Storage request" />
 		<property name="moment" value="2018/10/10 18:20" />
-		<property name="deadline" value="2020/01/01 13:00" />
+		<property name="deadline" value="2022/01/01 13:00" />
 		<property name="text" value="Request for the creation of a new database" />
 		<property name="reward" value="3600 EUR" />
 		<property name="ticker" value="RLZXC-52684" />
@@ -293,48 +293,32 @@
 		<property name="picture" value="https://www.dropbox.com/s/27pgcxdp7717lgu/banner4.jpg?dl=0" />
 		<property name="slogan" value="Commercial banner 1" />
 		<property name="target" value="http://www.github.com/" />
-		<property name="creditCard" value="5313694966604077" />
-		<property name="sponsor" ref="sponsor2Sponsor" />
-	</bean>
-
-	<bean id="commercialBanner02" class="acme.entities.banners.CommercialBanner">
-		<property name="picture" value="https://www.dropbox.com/s/jx64uaxs1yh8nqs/banner5.jpg?dl=0" />
-		<property name="slogan" value="Commercial banner 2" />
-		<property name="target" value="http://www.dropbox.com/" />
-		<property name="creditCard" value="5313694966604077" />
 		<property name="sponsor" ref="sponsor3Sponsor" />
-	</bean>
-
-	<bean id="commercialBanner03" class="acme.entities.banners.CommercialBanner">
-		<property name="picture" value="https://www.dropbox.com/s/qy602gkel4v8jl0/banner6.jpg?dl=0" />
-		<property name="slogan" value="Commercial banner 3" />
-		<property name="target" value="http://www.ev.us.es/" />
-		<property name="creditCard" value="5313694966604077" />
-		<property name="sponsor" ref="sponsor3Sponsor" />
+		<property name="creditCard" ref="creditCard1" />
 	</bean>
 	
 	<bean id="commercialBanner04" class="acme.entities.banners.CommercialBanner">
 		<property name="picture" value="https://www.dropbox.com/s/27pgcxdp7717lgu/banner4.jpg?dl=0" />
 		<property name="slogan" value="Commercial banner 4" />
 		<property name="target" value="http://www.github.com/" />
-		<property name="creditCard" value="5313694966604077" />
-		<property name="sponsor" ref="sponsor2Sponsor" />
+		<property name="sponsor" ref="sponsor3Sponsor" />
+		<property name="creditCard" ref="creditCard1" />
 	</bean>
 
 	<bean id="commercialBanner05" class="acme.entities.banners.CommercialBanner">
 		<property name="picture" value="https://www.dropbox.com/s/jx64uaxs1yh8nqs/banner5.jpg?dl=0" />
 		<property name="slogan" value="Commercial banner 5" />
 		<property name="target" value="http://www.dropbox.com/" />
-		<property name="creditCard" value="5313694966604077" />
 		<property name="sponsor" ref="sponsor1Sponsor" />
+		<property name="creditCard" ref="creditCard2" />
 	</bean>
 
 	<bean id="commercialBanner06" class="acme.entities.banners.CommercialBanner">
 		<property name="picture" value="https://www.dropbox.com/s/qy602gkel4v8jl0/banner6.jpg?dl=0" />
 		<property name="slogan" value="Commercial banner 6" />
 		<property name="target" value="http://www.ev.us.es/" />
-		<property name="creditCard" value="5313694966604077" />
 		<property name="sponsor" ref="sponsor1Sponsor" />
+		<property name="creditCard" ref="creditCard2" />
 	</bean>
 
 

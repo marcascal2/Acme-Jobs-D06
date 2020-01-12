@@ -9,3 +9,4 @@ sponsor.credit-card.form.button.update = Update credit card
 sponsor.credit-card.form.button.return = Return
 
 sponsor.credit-card.form.errors.expiredCard = This is a expired credit card
+sponsor.credit-card.form.errors.month = The month is out of range

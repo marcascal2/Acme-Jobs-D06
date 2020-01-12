@@ -76,15 +76,22 @@ public class SponsorCreditCardUpdateService implements AbstractUpdateService<Spo
 
 		String newMonth = entity.getMonth();
 		String newYear = entity.getYear();
-		LocalDate newDate = LocalDate.of(Integer.parseInt(newYear), Integer.parseInt(newMonth), 1);
-		LocalDate actualDate = LocalDate.now();
-		LocalDate limitDate = actualDate.withDayOfMonth(1);
 
-		if (c != null) {
-			boolean expiredCard = limitDate.isBefore(newDate);
-			errors.state(request, expiredCard, "year", "sponsor.credit-card.form.errors.expiredCard");
+		errors.state(request, Integer.valueOf(newMonth) <= 12, "month", "sponsor.credit-card.form.errors.month");
+		errors.state(request, Integer.valueOf(newMonth) >= 1, "month", "sponsor.credit-card.form.errors.month");
+
+		try {
+			LocalDate newDate = LocalDate.of(Integer.parseInt(newYear), Integer.parseInt(newMonth), 1);
+			LocalDate actualDate = LocalDate.now();
+			LocalDate limitDate = actualDate.withDayOfMonth(1);
+
+			if (c != null) {
+				boolean expiredCard = limitDate.isBefore(newDate);
+				errors.state(request, expiredCard, "year", "sponsor.credit-card.form.errors.expiredCard");
+			}
+		} catch (Exception e) {
+			System.out.println("error en la fecha");
 		}
-
 	}
 
 	@Override
