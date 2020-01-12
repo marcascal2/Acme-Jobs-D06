@@ -120,15 +120,6 @@
         primary key (`id`)
     ) engine=InnoDB;
 
-    create table `consumer` (
-       `id` integer not null,
-        `version` integer not null,
-        `user_account_id` integer,
-        `company` varchar(255),
-        `sector` varchar(255),
-        primary key (`id`)
-    ) engine=InnoDB;
-
     create table `credit_card` (
        `id` integer not null,
         `version` integer not null,
@@ -241,15 +232,6 @@
         `reward_currency` varchar(255),
         `ticker` varchar(255),
         `title` varchar(255),
-        primary key (`id`)
-    ) engine=InnoDB;
-
-    create table `provider` (
-       `id` integer not null,
-        `version` integer not null,
-        `user_account_id` integer,
-        `company` varchar(255),
-        `sector` varchar(255),
         primary key (`id`)
     ) engine=InnoDB;
 
@@ -384,11 +366,6 @@ create index IDXh9syauj4iixf18uts83saik5d on `request` (`ticker`);
        foreign key (`sponsor_id`) 
        references `sponsor` (`id`);
 
-    alter table `consumer` 
-       add constraint FK_6cyha9f1wpj0dpbxrrjddrqed 
-       foreign key (`user_account_id`) 
-       references `user_account` (`id`);
-
     alter table `credit_card` 
        add constraint `FK31l5hvh7p1nx1aw6v649gw3rc` 
        foreign key (`sponsor_id`) 
@@ -433,11 +410,6 @@ create index IDXh9syauj4iixf18uts83saik5d on `request` (`ticker`);
        add constraint `FKpcpr0xb5k7s4rxv5pulstt5v9` 
        foreign key (`sponsor_id`) 
        references `sponsor` (`id`);
-
-    alter table `provider` 
-       add constraint FK_b1gwnjqm6ggy9yuiqm0o4rlmd 
-       foreign key (`user_account_id`) 
-       references `user_account` (`id`);
 
     alter table `sponsor` 
        add constraint `FK28mvxtnmfjcwiw34vs8ryqkpa` 
