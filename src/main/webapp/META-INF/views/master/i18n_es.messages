@@ -85,20 +85,6 @@ master.menu.auditor = Auditor
 master.menu.auditor.audited-jobs = Trabajos auditados
 master.menu.auditor.non-audited-jobs = Trabajos no auditados
 
-# master.menu.provider ########################################################
-
-master.menu.provider = Proveedor
-master.menu.provider.favourite-link = Enlace favorito
-master.menu.provider.request = Solicitudes
-master.menu.provider.request.create = Crear una solicitud
-
-# master.menu.consumer ##########################################################
-
-master.menu.consumer = Consumidor
-master.menu.consumer.favourite-link = Enlace favorito
-master.menu.consumer.offer = Ofertas
-master.menu.consumer.offer.create = Crear oferta
-
 # master.menu.worker ##########################################################
 
 master.menu.worker = Trabajador
@@ -130,10 +116,6 @@ master.menu.user-account.authenticated.worker.form.title.update = Actualizar dat
 master.menu.user-account.authenticated.sponsor.form.title.create = Registrar como patrocinador
 master.menu.user-account.authenticated.sponsor.form.title.update = Actualizar datos de patrocinador
 master.menu.user-account.general-data = Datos generales
-master.menu.user-account.provider = Datos de proveedor
-master.menu.user-account.become-provider = Hazte proveedor
-master.menu.user-account.consumer = Datos de consumidor
-master.menu.user-account.become-consumer = Hazte consumidor
 master.menu.user-account.auditors-request.create = Solicitar cuenta de auditor
 
 ﻿# master.footer ###############################################################
