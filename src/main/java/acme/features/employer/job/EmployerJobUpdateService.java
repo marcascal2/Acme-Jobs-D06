@@ -3,9 +3,9 @@ package acme.features.employer.job;
 
 import java.util.Arrays;
 import java.util.Collection;
-import java.util.Collections;
 import java.util.List;
 
+import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -176,11 +176,11 @@ public class EmployerJobUpdateService implements AbstractUpdateService<Employer,
 		List<String> list = Arrays.asList(text.split(" "));
 
 		for (SpamWord spamWord : spamWords) {
-			double spanishFrequency = (double) Collections.frequency(list, spamWord.getSpanishTranslation()) / list.size() * 100;
+			double spanishFrequency = (double) StringUtils.countMatches(text, spamWord.getSpanishTranslation()) / list.size() * 100;
 			if (spanishFrequency > spamWord.getSpamThreshold()) {
 				return true;
 			}
-			double englishFrequency = (double) Collections.frequency(list, spamWord.getEnglishTranslation()) / list.size() * 100;
+			double englishFrequency = (double) StringUtils.countMatches(text, spamWord.getEnglishTranslation()) / list.size() * 100;
 			if (englishFrequency > spamWord.getSpamThreshold()) {
 				return true;
 			}
