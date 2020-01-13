@@ -37,3 +37,10 @@
 	</acme:footer-logo>		
 	
 </acme:footer-panel>
+
+<footer class="rounded text-light">
+	<div class="text-center">
+  		<img src='<jstl:out value="${banner.picture}"/>' class="rounded">
+	</div>
+</footer>
+

@@ -290,15 +290,32 @@
 	<!-- Commercial banners -->
 
 	<bean id="commercialBanner01" class="acme.entities.banners.CommercialBanner">
-		<property name="picture" value="https://www.dropbox.com/s/27pgcxdp7717lgu/banner4.jpg?dl=0" />
+		<property name="picture" value="https://i.imgur.com/2eVF1HG.png" />
 		<property name="slogan" value="Commercial banner 1" />
 		<property name="target" value="http://www.github.com/" />
+		<property name="creditCard" value="5313694966604077" />
+		<property name="sponsor" ref="sponsor2Sponsor" />
+	</bean>
+
+	<bean id="commercialBanner02" class="acme.entities.banners.CommercialBanner">
+		<property name="picture" value="https://i.imgur.com/NGLSjk6.png" />
+		<property name="slogan" value="Commercial banner 2" />
+		<property name="target" value="http://www.dropbox.com/" />
+		<property name="creditCard" value="5313694966604077" />
+		<property name="sponsor" ref="sponsor3Sponsor" />
+	</bean>
+
+	<bean id="commercialBanner03" class="acme.entities.banners.CommercialBanner">
+		<property name="picture" value="https://i.imgur.com/NGLSjk6.png" />
+		<property name="slogan" value="Commercial banner 3" />
+		<property name="target" value="http://www.ev.us.es/" />
+		<property name="creditCard" value="5313694966604077" />
 		<property name="sponsor" ref="sponsor3Sponsor" />
 		<property name="creditCard" ref="creditCard1" />
 	</bean>
 	
 	<bean id="commercialBanner04" class="acme.entities.banners.CommercialBanner">
-		<property name="picture" value="https://www.dropbox.com/s/27pgcxdp7717lgu/banner4.jpg?dl=0" />
+		<property name="picture" value="https://i.imgur.com/2eVF1HG.png" />
 		<property name="slogan" value="Commercial banner 4" />
 		<property name="target" value="http://www.github.com/" />
 		<property name="sponsor" ref="sponsor3Sponsor" />
@@ -306,7 +323,7 @@
 	</bean>
 
 	<bean id="commercialBanner05" class="acme.entities.banners.CommercialBanner">
-		<property name="picture" value="https://www.dropbox.com/s/jx64uaxs1yh8nqs/banner5.jpg?dl=0" />
+		<property name="picture" value="https://i.imgur.com/8YcXhS0.png" />
 		<property name="slogan" value="Commercial banner 5" />
 		<property name="target" value="http://www.dropbox.com/" />
 		<property name="sponsor" ref="sponsor1Sponsor" />
@@ -314,7 +331,7 @@
 	</bean>
 
 	<bean id="commercialBanner06" class="acme.entities.banners.CommercialBanner">
-		<property name="picture" value="https://www.dropbox.com/s/qy602gkel4v8jl0/banner6.jpg?dl=0" />
+		<property name="picture" value="https://i.imgur.com/NGLSjk6.png" />
 		<property name="slogan" value="Commercial banner 6" />
 		<property name="target" value="http://www.ev.us.es/" />
 		<property name="sponsor" ref="sponsor1Sponsor" />
@@ -325,7 +342,7 @@
 	<!-- Non commercial banners -->
 
 	<bean id="nonCommercialBanner01" class="acme.entities.banners.NonCommercialBanner">
-		<property name="picture" value="https://www.dropbox.com/s/if086iscy3jpgbq/banner1.jpg?dl=0" />
+		<property name="picture" value="https://i.imgur.com/fihihcF.png" />
 		<property name="slogan" value="Non commercial banner 1" />
 		<property name="target" value="http://www.github.com/" />
 		<property name="jingle" value="https://www.dropbox.com/s/58dds8plb13pl63/jingle1.mp3?dl=0" />
@@ -333,7 +350,7 @@
 	</bean>
 
 	<bean id="nonCommercialBanner02" class="acme.entities.banners.NonCommercialBanner">
-		<property name="picture" value="https://www.dropbox.com/s/oa2ytfbgoprzh2h/banner2.jpg?dl=0" />
+		<property name="picture" value="https://i.imgur.com/MtBRoNP.png" />
 		<property name="slogan" value="Non commercial banner 2" />
 		<property name="target" value="http://www.dropbox.com/" />
 		<property name="jingle" value="https://www.dropbox.com/s/h7xwlbz4fbj7dak/jingle2.mp3?dl=0" />
@@ -349,7 +366,7 @@
 	</bean>
 
 	<bean id="nonCommercialBanner04" class="acme.entities.banners.NonCommercialBanner">
-		<property name="picture" value="https://www.dropbox.com/s/7eaa0ls7u84on5i/banner3.jpg?dl=0" />
+		<property name="picture" value="https://i.imgur.com/MtBRoNP.png" />
 		<property name="slogan" value="Non commercial banner 4" />
 		<property name="target" value="http://www.ev.us.es/" />
 		<property name="jingle" value="https://www.dropbox.com/s/t5hdokera5zxy29/jingle3.mp3?dl=0" />
@@ -357,7 +374,7 @@
 	</bean>
 	
 	<bean id="nonCommercialBanner05" class="acme.entities.banners.NonCommercialBanner">
-		<property name="picture" value="https://www.dropbox.com/s/7eaa0ls7u84on5i/banner3.jpg?dl=0" />
+		<property name="picture" value="https://i.imgur.com/MtBRoNP.png" />
 		<property name="slogan" value="Non commercial banner 5" />
 		<property name="target" value="http://www.ev.us.es/" />
 		<property name="jingle" value="https://www.dropbox.com/s/t5hdokera5zxy29/jingle3.mp3?dl=0" />
@@ -365,7 +382,7 @@
 	</bean>
 	
 	<bean id="nonCommercialBanner06" class="acme.entities.banners.NonCommercialBanner">
-		<property name="picture" value="https://www.dropbox.com/s/7eaa0ls7u84on5i/banner3.jpg?dl=0" />
+		<property name="picture" value="https://i.imgur.com/MtBRoNP.png" />
 		<property name="slogan" value="Non commercial banner 6" />
 		<property name="target" value="http://www.ev.us.es/" />
 		<property name="jingle" value="https://www.dropbox.com/s/t5hdokera5zxy29/jingle3.mp3?dl=0" />
