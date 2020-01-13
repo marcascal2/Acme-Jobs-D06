@@ -12,7 +12,7 @@
 	<acme:form-textbox code="sponsor.credit-card.form.label.cvc" path="cvc"/>
 	
 	<acme:form-hidden path="sponsorId"/>
-	
+		
 	<acme:form-submit test="${command == 'create'}" code="sponsor.credit-card.form.button.create" action="/sponsor/credit-card/create"/>
 	<acme:form-submit test="${command == 'update'}" code="sponsor.credit-card.form.button.update" action="/sponsor/credit-card/update"/>
 	<acme:form-return code="sponsor.credit-card.form.button.return" />
