@@ -26,7 +26,6 @@ import javax.validation.constraints.NotEmpty;
 
 import org.hibernate.validator.constraints.Length;
 
-import acme.datatypes.Phone;
 import acme.datatypes.UserIdentity;
 import acme.framework.helpers.PasswordHelper;
 import acme.framework.helpers.StringHelper;
@@ -71,9 +70,6 @@ public class UserAccount extends DomainEntity {
 
 	@Valid
 	private UserIdentity	identity;
-
-	@Valid
-	private Phone			phone;
 
 
 	// Derived attributes -----------------------------------------------------

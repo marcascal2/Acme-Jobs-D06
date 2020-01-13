@@ -1,11 +1,11 @@
 
 package acme.components;
 
-import java.text.ParseException;
 import java.util.Locale;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+import org.springframework.expression.ParseException;
 import org.springframework.format.Formatter;
 
 import acme.datatypes.Phone;
@@ -22,11 +22,11 @@ public class PhoneFormatter implements Formatter<Phone> {
 		String result;
 		String countryCodeText, areaCodeText, numberText;
 
-		countryCodeText = String.format("+%d", object.getCountryCode());
-		areaCodeText = object.getAreaCode() == null ? " " : String.format(" (%d) ", object.getAreaCode());
+		countryCodeText = String.format("%d", object.getCountryCode());
+		areaCodeText = object.getAreaCode() == null ? " " : String.format(" (%s) ", object.getAreaCode());
 		numberText = String.format("%s", object.getNumber());
 
-		result = String.format("+%d%s%ld", countryCodeText, areaCodeText, numberText);
+		result = String.format("+%s%s%s", countryCodeText, areaCodeText, numberText);
 
 		return result;
 	}
@@ -48,14 +48,14 @@ public class PhoneFormatter implements Formatter<Phone> {
 		countryCodeRegexp = "\\+\\d{1,3}";
 		areaCodeRegexp = "\\d{1,6}";
 		numberRegexp = "\\d{1,9}([\\s-]\\d{1,9}){0,5}";
-		phoneRegexp = String.format("\\s*(?<CC>%1$s)(\\s+\\((?<AC>%2$s)\\)\\s+)(?<N>%3$s)\\s*$", countryCodeRegexp, areaCodeRegexp, numberRegexp);
+		phoneRegexp = String.format("^\\s*(?<CC>%1$s)(\\s+\\((?<AC>%2$s)\\)\\s+|\\s+)(?<N>%3$s)\\s*$", countryCodeRegexp, areaCodeRegexp, numberRegexp);
 
 		pattern = Pattern.compile(phoneRegexp, Pattern.CASE_INSENSITIVE | Pattern.UNICODE_CASE);
 		matcher = pattern.matcher(text);
 
 		if (!matcher.find()) {
 			errorMessage = MessageHelper.getMessage("default.error.conversion", null, "Invalid value", locale);
-			throw new ParseException(errorMessage, 0);
+			throw new ParseException(0, errorMessage);
 		} else {
 			countryCodeText = matcher.group("CC");
 			countryCode = Integer.valueOf(countryCodeText);

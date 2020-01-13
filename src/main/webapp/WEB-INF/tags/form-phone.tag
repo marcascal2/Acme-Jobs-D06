@@ -5,10 +5,10 @@
 <%@taglib prefix="jstl" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@taglib prefix="acme" tagdir="/WEB-INF/tags"%>
 
-<%@attribute name="path" required="true" type="java.lang.String"%>
-<%@attribute name="code" required="true" type="java.lang.String"%>
-<%@attribute name="placeholder" required="false" type="java.lang.String"%>
-<%@attribute name="readonly" required="false" type="java.lang.Boolean"%>
+<%@attribute name="path" required="true"%>
+<%@attribute name="code" required="true"%>
+<%@attribute name="placeholder"%>
+<%@attribute name="readonly" type="java.lang.Boolean"%>
 
 <jstl:if test="${placeholder == null}">
 	<jstl:set var="placeholder" value="${MessageHelper.getMessage('default.placeholder.phone')}"/>	
