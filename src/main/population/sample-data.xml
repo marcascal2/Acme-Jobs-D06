@@ -289,27 +289,10 @@
 
 	<!-- Commercial banners -->
 
-	<bean id="commercialBanner01" class="acme.entities.banners.CommercialBanner">
-		<property name="picture" value="https://i.imgur.com/2eVF1HG.png" />
-		<property name="slogan" value="Commercial banner 1" />
-		<property name="target" value="http://www.github.com/" />
-		<property name="creditCard" value="5313694966604077" />
-		<property name="sponsor" ref="sponsor2Sponsor" />
-	</bean>
-
-	<bean id="commercialBanner02" class="acme.entities.banners.CommercialBanner">
-		<property name="picture" value="https://i.imgur.com/NGLSjk6.png" />
-		<property name="slogan" value="Commercial banner 2" />
-		<property name="target" value="http://www.dropbox.com/" />
-		<property name="creditCard" value="5313694966604077" />
-		<property name="sponsor" ref="sponsor3Sponsor" />
-	</bean>
-
 	<bean id="commercialBanner03" class="acme.entities.banners.CommercialBanner">
 		<property name="picture" value="https://i.imgur.com/NGLSjk6.png" />
 		<property name="slogan" value="Commercial banner 3" />
 		<property name="target" value="http://www.ev.us.es/" />
-		<property name="creditCard" value="5313694966604077" />
 		<property name="sponsor" ref="sponsor3Sponsor" />
 		<property name="creditCard" ref="creditCard1" />
 	</bean>

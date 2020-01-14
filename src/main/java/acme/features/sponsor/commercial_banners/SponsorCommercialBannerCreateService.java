@@ -36,7 +36,10 @@ public class SponsorCommercialBannerCreateService implements AbstractCreateServi
 
 		principal = request.getPrincipal();
 		sponsor = this.repository.findSponsorbySponsorId(principal.getActiveRoleId());
-		hasCreditCard = !sponsor.getCreditCard().equals(null);
+
+		CreditCard card = sponsor.getCreditCard();
+
+		hasCreditCard = card != null;
 
 		return hasCreditCard;
 	}
