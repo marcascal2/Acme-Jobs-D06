@@ -373,6 +373,26 @@
 	</bean>
 
 
+	<!-- Phones ****************** -->
+
+	<bean id="phoneWorker1" class="acme.datatypes.Phone">
+		<property name="countryCode" value="+34" />
+		<property name="areaCode" value="" />
+		<property name="number" value="652343935" />
+	</bean>
+	
+	<bean id="phoneEmployer2" class="acme.datatypes.Phone">
+		<property name="countryCode" value="+012" />
+		<property name="areaCode" value="0345" />
+		<property name="number" value="678900" />
+	</bean>
+	
+	<bean id="phoneSponsor1" class="acme.datatypes.Phone">
+		<property name="countryCode" value="+44" />
+		<property name="areaCode" value="0" />
+		<property name="number" value="123456" />
+	</bean>
+
 	<!-- Workers ****************** -->
 
 	<bean id="worker1UserAccount" class="acme.framework.entities.UserAccount">
@@ -384,6 +404,7 @@
 				<property name="name" value="Worker" />
 				<property name="surname" value="One" />
 				<property name="email" value="worker1@acme.com" />
+				<property name="phone" ref="phoneWorker1"/>
 			</bean>
 		</property>
 		<property name="roles">
@@ -847,6 +868,7 @@
 				<property name="name" value="Employer" />
 				<property name="surname" value="One" />
 				<property name="email" value="employer1@acme.com" />
+				<property name="phone" ref="phoneEmployer2"/>
 			</bean>
 		</property>
 		<property name="roles">
@@ -1369,6 +1391,7 @@
 				<property name="name" value="Sponsor"/>
 				<property name="surname" value="One"/>
 				<property name="email" value="sponsor1@gmail.com"/>
+				<property name="phone" ref="phoneSponsor1"/>
 			</bean>		
 		</property>
 		<property name="roles">
