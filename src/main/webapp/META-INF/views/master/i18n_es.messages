@@ -70,10 +70,6 @@ master.menu.administrator.investor_records.create = Registrar inversor
 master.menu.administrator.challenges = Desafíos
 master.menu.administrator.challenges.create = Crear desafío
 
-master.menu.administrator.banners.commercial-banner = Banners comerciales
-master.menu.administrator.banners.commercial-banner.create = Crear banner comercial
-master.menu.administrator.banners.non-commercial-banner = Banners no comerciales
-master.menu.administrator.banners.non-commercial-banner.create = Crear banner no comercial
 master.menu.administrator.investor-record = Inversores
 master.menu.administrator.investor-record.create = Registrar inversor
 master.menu.administrator.shutdown = Parar el sistema

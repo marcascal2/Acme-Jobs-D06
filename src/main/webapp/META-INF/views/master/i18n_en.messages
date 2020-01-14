@@ -71,10 +71,6 @@ master.menu.administrator.investor_records.create = Create investor record
 master.menu.administrator.challenges = Challenges
 master.menu.administrator.challenges.create = Create challenge
 
-master.menu.administrator.banners.commercial-banner = Commercial banners
-master.menu.administrator.banners.commercial-banner.create = Create commercial banner
-master.menu.administrator.banners.non-commercial-banner = Non commercial banners
-master.menu.administrator.banners.non-commercial-banner.create = Create non commercial banner
 master.menu.administrator.investor-record = Investor records
 master.menu.administrator.investor-record.create = Create investor record
 master.menu.administrator.shutdown = Shut down
