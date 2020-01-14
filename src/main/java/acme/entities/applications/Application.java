@@ -50,6 +50,7 @@ public class Application extends DomainEntity {
 	@NotNull
 	private ApplicationStatus	status;
 
+	@NotBlank
 	private String				statement;
 
 	@NotBlank
