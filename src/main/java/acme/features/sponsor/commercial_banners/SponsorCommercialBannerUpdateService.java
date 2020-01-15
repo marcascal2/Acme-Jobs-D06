@@ -121,11 +121,11 @@ public class SponsorCommercialBannerUpdateService implements AbstractUpdateServi
 		List<String> list = Arrays.asList(text.split(" "));
 
 		for (SpamWord spamWord : spamWords) {
-			double spanishFrequency = (double) StringUtils.countMatches(text, spamWord.getSpanishTranslation()) / list.size() * 100;
+			double spanishFrequency = (double) StringUtils.countMatches(text.toLowerCase(), spamWord.getSpanishTranslation().toLowerCase()) / list.size() * 100;
 			if (spanishFrequency > spamWord.getSpamThreshold()) {
 				return true;
 			}
-			double englishFrequency = (double) StringUtils.countMatches(text, spamWord.getEnglishTranslation()) / list.size() * 100;
+			double englishFrequency = (double) StringUtils.countMatches(text.toLowerCase(), spamWord.getEnglishTranslation().toLowerCase()) / list.size() * 100;
 			if (englishFrequency > spamWord.getSpamThreshold()) {
 				return true;
 			}
