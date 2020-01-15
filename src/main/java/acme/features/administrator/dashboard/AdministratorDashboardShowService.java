@@ -108,15 +108,14 @@ public class AdministratorDashboardShowService implements AbstractShowService<Ad
 
 	private List<Integer> getDataByDate(final List<String[]> list, final List<LocalDate> dates) {
 		Map<LocalDate, Integer> lp = new HashMap<LocalDate, Integer>();
-		List<String[]> l = list;
 		for (LocalDate ld1 : dates) {
 			lp.put(ld1, 0);
 		}
 
 		for (int i = 0; i < list.size(); i++) {
-			LocalDate ld2 = LocalDate.parse(list.get(i)[0].substring(0, 10));
+			LocalDate ld2 = LocalDate.of(LocalDate.now().getYear(), LocalDate.now().getMonth(), Integer.parseInt(list.get(i)[0]));
 			if (lp.containsKey(ld2)) {
-				lp.replace(ld2, 0, Integer.parseInt(l.get(i)[1]));
+				lp.replace(ld2, Integer.parseInt(list.get(i)[1]));
 			}
 		}
 
